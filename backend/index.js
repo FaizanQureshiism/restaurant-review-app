@@ -16,8 +16,8 @@ MongoClient.connect(process.env.RESTREVIEWS_DB_URI, {
     process.exit(1);
   })
   .then(async (client) => {
-    await RestaurantsDAO.injectDB(client);
+    await RestaurantsDAO.injectDB(client)
     app.listen(port, () => {
-      console.log(`listening on port ${port}`);
-    });
-  });
+      console.log(`listening on port ${port}`)
+    })
+  })
